@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now | GlobalPathways</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-3d-container"><div class="stars"></div><div class="plane-3d"><svg viewBox="0 0 100 100" width="120" height="120"><path d="M50 10 L60 40 L90 50 L60 60 L50 90 L40 60 L10 50 L40 40 Z" fill="#ffffff" opacity="0.9"/><path d="M50 30 L55 50 L50 70 L45 50 Z" fill="#d4af37"/></svg></div></div>
+    <nav class="navbar">
+        <a class="logo" href="index.html"><img src="logo.svg" alt="GlobalPathways logo"><span>GlobalPathways</span></a>
+        <ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="apply.html" class="btn-nav">Apply Now</a></li></ul>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section class="page-hero">
+        <h1>Start Your <span class="gold-text">Journey</span></h1>
+        <p>Fill out the application below. Our team will review your profile and contact you via WhatsApp.</p>
+    </section>
+
+    <section class="section">
+        <div class="process-steps">
+            <div class="step glass-card"><span>1</span><h4>Apply</h4><p>Submit your details</p></div>
+            <div class="step glass-card"><span>2</span><h4>Interview</h4><p>Meet our agents</p></div>
+            <div class="step glass-card"><span>3</span><h4>Selection</h4><p>Get matched to a job</p></div>
+            <div class="step glass-card"><span>4</span><h4>Deploy</h4><p>Visa & Travel</p></div>
+        </div>
+
+        <div class="glass-card apply-form-container">
+            <h2 class="section-title" style="margin-top:0;">Application <span class="gold-text">Form</span></h2>
+            <form id="applicationForm">
+                <div class="form-grid">
+                    <div class="form-group"><label>Full Name</label><input type="text" id="fullName" required placeholder="John Doe"></div>
+                    <div class="form-group"><label>Phone Number</label><input type="tel" id="phone" required placeholder="+1234567890"></div>
+                    <div class="form-group"><label>Email Address</label><input type="email" id="email" required placeholder="john@email.com"></div>
+                    <div class="form-group"><label>Desired Country</label>
+                        <select id="country" required>
+                            <option value="">Select Country</option><option>UAE</option><option>Saudi Arabia</option><option>Qatar</option><option>United Kingdom</option><option>Germany</option><option>Poland</option><option>Croatia</option><option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Desired Job Role</label>
+                        <select id="jobRole" required>
+                            <option value="">Select Job</option><option>Security Guard</option><option>Waiter/Waitress</option><option>Housekeeping</option><option>Construction</option><option>Driver</option><option>Factory Worker</option><option>Caregiver</option><option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Years of Experience</label><input type="number" id="experience" required placeholder="e.g., 3"></div>
+                </div>
+                <div class="form-group full-width"><label>Additional Message / Skills</label><textarea id="message" rows="4" placeholder="Tell us about your skills..."></textarea></div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px; font-size: 1.1rem;"><i class="fab fa-whatsapp"></i> Submit via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col"><h4>GlobalPathways</h4><p>Your trusted partner for global career placements.</p></div>
+            <div class="footer-col"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="destinations.html">Destinations</a><a href="apply.html">Apply Now</a></div>
+            <div class="footer-col footer-contact">
+                <h4>Contact</h4>
+                <p class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:contact@globalpathways-agency.com">contact@globalpathways-agency.com</a></p>
+                <p class="footer-contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+15550100000">+1 555 010 0000</a></p>
+                <p class="footer-contact-item"><i class="fas fa-sms"></i> <a href="sms:+15550100000">Send SMS</a></p>
+                <p class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> 123 Skyline Blvd, Global City</p>
+                <div class="footer-actions">
+                    <a class="footer-btn" href="mailto:contact@globalpathways-agency.com"><i class="fas fa-paper-plane"></i> Email</a>
+                    <a class="footer-btn" href="tel:+15550100000"><i class="fas fa-phone-alt"></i> Call</a>
+                    <a class="footer-btn" href="sms:+15550100000"><i class="fas fa-sms"></i> SMS</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://facebook.com/GlobalPathways" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/GlobalPathways" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/company/GlobalPathways" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/GlobalPathways" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 GlobalPathways Agency. All Rights Reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
