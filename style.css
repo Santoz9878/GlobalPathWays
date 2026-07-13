@@ -49,8 +49,10 @@ body { font-family: 'Montserrat', sans-serif; background-color: var(--primary-bg
 .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; transition: color 0.3s; font-size: 1rem; }
 .nav-links a:hover, .nav-links .btn-nav { color: var(--gold); }
 .btn-nav { background: var(--gold); color: var(--secondary-bg) !important; padding: 12px 22px; border-radius: 30px; font-weight: 700; }
-.hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--gold); -webkit-tap-highlight-color: transparent; touch-action: manipulation; -webkit-user-select: none; user-select: none; }
-.hamburger i { color: var(--gold); transition: color 0.2s ease; }
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; -webkit-user-select: none; user-select: none; transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease; border-radius: 50%; padding: 0; width: 50px; height: 50px; background: rgba(15, 23, 42, 0.88); border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center; z-index: 10001; border: none; }
+.hamburger i { color: #ffffff; transition: transform 0.2s ease, color 0.2s ease; }
+.hamburger:hover, .hamburger:focus { background: rgba(15, 23, 42, 0.98); box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18); outline: none; }
+.hamburger:active { transform: scale(0.97); }
 .hamburger:focus { outline: none; }
 
 /* HERO & PAGE HERO */
@@ -141,17 +143,18 @@ footer { background: rgba(255, 255, 255, 0.9); padding: 50px 5% 20px; border-top
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .hamburger { display: block; position: relative; z-index: 1300; }
+    .hamburger { display: flex; align-items: center; justify-content: center; position: relative; z-index: 1300; width: 48px; height: 48px; margin-left: 12px; }
     .navbar { padding: 14px 14px; z-index: 1300; justify-content: space-between; }
     .logo { font-size: 1.45rem; gap: 10px; flex: 1 1 auto; min-width: 0; }
     .logo img { width: 42px; height: 42px; }
     .logo span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: calc(100vw - 120px); }
-    .nav-links { position: fixed; top: 0; left: 0; right: 0; bottom: 0; min-width: 100%; min-height: 100%; background-color: #ffffff !important; opacity: 1 !important; flex-direction: column; align-items: center; justify-content: flex-start; padding: 110px 14px 30px; transform: translateX(100%); transition: transform 0.35s ease; z-index: 9999; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18); overflow-y: auto; }
-    .nav-links::before { content: ''; position: absolute; inset: 0; background: #ffffff; z-index: -1; }
+    .nav-links { position: fixed; inset: 0; min-width: 100%; min-height: 100%; background: rgba(15, 23, 42, 0.98); color: #ffffff; opacity: 1 !important; flex-direction: column; align-items: center; justify-content: flex-start; padding: 124px 18px 30px; transform: translateX(100%); transition: transform 0.35s ease, background 0.35s ease; z-index: 999; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25); overflow-y: auto; backdrop-filter: blur(16px); }
+    .nav-links::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 30%), radial-gradient(circle at bottom right, rgba(197, 157, 47, 0.12), transparent 25%), rgba(15, 23, 42, 0.96); z-index: -1; }
     .nav-links.active { transform: translateX(0); }
     .nav-links li { width: 100%; }
-    .nav-links a { font-size: 1.05rem; margin: 10px 0; color: var(--text-main); display: inline-block; width: 100%; max-width: 260px; text-align: center; padding: 12px 0; border-radius: 999px; }
-    .nav-links .btn-nav { width: 100%; max-width: 260px; }
+    .nav-links a { font-size: 1.05rem; margin: 12px 0; color: #ffffff; display: inline-block; width: 100%; max-width: 280px; text-align: center; padding: 14px 0; border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.06); transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease; }
+    .nav-links a:hover { background: rgba(255,255,255,0.18); color: var(--gold); transform: translateY(-1px); }
+    .nav-links .btn-nav { width: 100%; max-width: 280px; background: var(--gold); color: #111827 !important; border-color: rgba(255,255,255,0.22); }
     .hero-title, .page-hero h1 { font-size: 1.8rem; max-width: 100%; line-height: 1.1; padding: 0 10px; white-space: normal; }
     .hero-subtitle, .page-hero p { font-size: 0.98rem; max-width: 100%; padding: 0 12px; margin-bottom: 28px; }
     .hero-buttons { flex-direction: column; gap: 12px; }
