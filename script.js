@@ -61,7 +61,7 @@ if (appForm) {
         const country = document.getElementById('country').value;
         const job = document.getElementById('jobRole').value;
         let waMessage = `*NEW APPLICATION*%0AName: ${name}%0APhone: ${phone}%0ACountry: ${country}%0AJob: ${job}`;
-        // Using a dummy number for the main agency line
-        window.open(`https://wa.me/15550100000?text=${waMessage}`, '_blank');
+        // Using the Kenyan main agency line
+        window.open(`https://wa.me/254712345678?text=${waMessage}`, '_blank');
     });
 }

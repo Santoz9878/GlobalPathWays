@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="faviconTitle">
+  <title id="faviconTitle">GlobalPathways</title>
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="18" fill="#0f172a"/>
+  <circle cx="50" cy="50" r="34" fill="url(#favGrad)"/>
+  <path d="M36 45c4-4 8-4 12 0" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M34 55c4 4 8 4 12 0" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M50 30v40" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+</svg>
