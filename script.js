@@ -7,7 +7,9 @@ if (hamburger && navLinks) {
         const icon = hamburger.querySelector('i');
         icon.classList.toggle('fa-bars', !isOpen);
         icon.classList.toggle('fa-times', isOpen);
+        hamburger.classList.toggle('open', isOpen);
         hamburger.setAttribute('aria-expanded', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
     });
 }
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -16,7 +18,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         const icon = hamburger.querySelector('i');
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
+        hamburger.classList.remove('open');
         hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
     });
 });
 
