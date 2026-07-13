@@ -1,12 +1,14 @@
 // Mobile Menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const icon = hamburger.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
-});
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = hamburger.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+}
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -30,6 +32,24 @@ document.querySelectorAll('.glass-card, .section-title').forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
+
+// Video background loading
+const heroVideo = document.querySelector('.bg-video');
+if (heroVideo) {
+    const startVideo = () => {
+        heroVideo.play().catch(() => {});
+    };
+
+    window.addEventListener('load', () => {
+        setTimeout(startVideo, 200);
+    });
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            startVideo();
+        }
+    });
+}
 
 // Apply Form WhatsApp Redirect
 const appForm = document.getElementById('applicationForm');
